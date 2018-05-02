@@ -8,6 +8,6 @@ module.exports = function(app) {
 
     app.post("/api/friends", function (req, res) {
         movieStars.push(req.body);
-        res.json(true);
+        
     });
 };

@@ -193,6 +193,8 @@
 
       </form>
 
+      <a href="/api/friends"></a>
+      
       </div>
       <div class="modal fade" id="userModal" role="dialog">
             <div class="modal-dialog">
@@ -222,7 +224,7 @@
                               else {
                                     var userAnswer = [];
                                     for (i = 1; i < 11; i++) {
-                                          userAnswer.push(parseInt($("question" + i).val().substring(0, 1)));
+                                          userAnswer.push($("question" + i).val().substring(0, 1));
                                     }
 
                                     var userEntry =
@@ -232,7 +234,7 @@
                                                 scores: userAnswer
                                           };
 
-                                    var photoLink = location.origin;
+                                    var photoLink = window.location.origin;
 
 
                                     $.post(photoLink + "/api/friends", userEntry,
