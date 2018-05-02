@@ -8,284 +8,170 @@
 </head>
 
 <body>
-      <div class="form-check">
+      <form role="form" id="survey">
+            <h3>Profile Questions</h3>
+            <div class="form-group">
+                  <label for="user-name">Name:</label>
+                  <input type="text" class="form-control" id="user-name">
+            </div>
+            <div class="form-group">
+                  <label for="photo">Photo:</label>
+                  <input type="text" class="form-control" id="photo">
+                  
+            </div>
+            
+            <p>Please select the most suitable answer:</p>
+
+            <div class="row col-lg-12">
+                  <p>1. What type of movie do you like?</p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question1">
+                              <option></option>
+                              <option>1 Action</option>
+                              <option>2 Adventure </option>
+                              <option>3 Fantasy</option>
+                              <option>4 Suspense Thriller </option>
+                              <option>5 Animation</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                 
+                  <p>2. Which movie star you like the best?</p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question2">
+                                    <option></option>
+                              <option>1 Denzel Washington</option>
+                              <option>2 Matt Damon</option>
+                              <option>3 Popeye</option>
+                              <option>4 Antonio Banderas</option>
+                              <option>5 None of the Above</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>3. Do you like CIA movies?</p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question3">
+                                    <option></option>
+                              <option>1 Yes</option>
+                              <option>2 No</option>
+                              <option>3 Maybe</option>
+                              <option>4 Sometimes</option>
+                              <option>5 It depends</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>4. Do you like running?</p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question4">
+                                    <option></option>
+                              <option>1 Yes</option>
+                              <option>2 No</option>
+                              <option>3 Maybe</option>
+                              <option>4 Sometimes</option>
+                              <option>5 It depends</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>5. What is your native language?</p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question5">
+                                    <option></option>
+                              <option>1 English</option>
+                              <option>2 Spanish</option>
+                              <option>3 Portugese</option>
+                              <option>4 French</option>
+                              <option>5 Italian</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>6. Which actor would you like to star in a movie with?
+                  </p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question6">
+                                    <option></option>
+                              <option>1 Denzel Washington</option>
+                              <option>2 Matt Damon</option>
+                              <option>3 Popeye</option>
+                              <option>4 Antonio Banderas </option>
+                              <option>5 None of the Above</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>7. Do you like cartoon movies?
+                  </p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question7">
+                                    <option></option>
+                              <option>1 Yes</option>
+                              <option>2 No</option>
+                              <option>3 Maybe</option>
+                              <option>4 Sometimes</option>
+                              <option>5 It depends</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>8. Do you like using a sword?
+                  </p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question8">
+                                    <option></option>
+                              <option>1 Yes</option>
+                              <option>2 No</option>
+                              <option>3 Maybe</option>
+                              <option>4 Sometimes</option>
+                              <option>5 It depends</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>9. Do you like muscles?
+                  </p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question9">
+                                    <option></option>
+                              <option>1 Yes</option>
+                              <option>2 No</option>
+                              <option>3 Maybe</option>
+                              <option>4 Sometimes</option>
+                              <option>5 It depends</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="row col-lg-12">
+                  <p>10. Do you like spinach?
+                  </p>
+                  <div class="form-group col-xs-3">
+                        <select class="form-control" id="question10">
+                                    <option></option>
+                              <option>1 Yes</option>
+                              <option>2 No</option>
+                              <option>3 Maybe</option>
+                              <option>4 Sometimes</option>
+                              <option>5 It depends</option>
+                        </select>
+                  </div>
+            </div>
+
+            <button type="button" class="btn btn-success btn-block" id="submit">Submit</button>
+
+      </form>
 
       </div>
-      <p>1. What type of movie do you like?</p>
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1a1" value="option1" checked>
-      <label class="form-check-label" for="exampleRadios1">
-            Action
-      </label>
-      <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2b1" value="option2">
-            <label class="form-check-label" for="exampleRadios2b1">
-                  Adventure
-      </div>
-      <div class="form-check">
-            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3c1" value="option3">
-            <label class="form-check-label" for="exampleRadios3c1">
-                  Fantasy
-            </label>
-            <div class="form-check">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4d1" value="option4">
-                  <label class="form-check-label" for="exampleRadios4d1">
-                        Suspense Thriller
-                  </label>
-                  <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5e1" value="option5">
-                        <label class="form-check-label" for="exampleRadios5e1">
-                              Animation
-                        </label>
-                        <p>2. Which movie star you like the best?</p>
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1a2" value="option1" checked>
-                        <label class="form-check-label" for="exampleRadios1a2">
-                              Denzel Washington
-                        </label>
-                        <div class="form-check">
-                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2b2" value="option2">
-                              <label class="form-check-label" for="exampleRadios2b2">
-                                    Matt Damon
-                        </div>
-                        <div class="form-check">
-                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3c2" value="option3">
-                              <label class="form-check-label" for="exampleRadios3c2">
-                                    Popeye
-                              </label>
-                              <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4d2" value="option4">
-                                    <label class="form-check-label" for="exampleRadios4d2">
-                                          Antonio Banderas
-                                    </label>
-                                    <div class="form-check">
-                                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5e2" value="option5">
-                                          <label class="form-check-label" for="exampleRadios5e2">
-                                                None of the Above
-                                          </label>
-                                          <p>3. Do you like CIA movies?</p>
-                                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                          <label class="form-check-label" for="exampleRadios1">
-                                                Yes
-                                          </label>
-                                          <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                <label class="form-check-label" for="exampleRadios2">
-                                                      No
-                                          </div>
-                                          <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                <label class="form-check-label" for="exampleRadios3">
-                                                      Maybe
-                                                </label>
-                                                <div class="form-check">
-                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                      <label class="form-check-label" for="exampleRadios4">
-                                                            Sometimes
-                                                      </label>
-                                                      <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                            <label class="form-check-label" for="exampleRadios5">
-                                                                  It depends
-                                                            </label>
-                                                            <p>4. Do you like running?</p>
-                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                            <label class="form-check-label" for="exampleRadios1">
-                                                                  Yes
-                                                            </label>
-                                                            <div class="form-check">
-                                                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                  <label class="form-check-label" for="exampleRadios2">
-                                                                        No
-                                                            </div>
-                                                            <div class="form-check">
-                                                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                  <label class="form-check-label" for="exampleRadios3">
-                                                                        Maybe
-                                                                  </label>
-                                                                  <div class="form-check">
-                                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                        <label class="form-check-label" for="exampleRadios4">
-                                                                              Sometimes
-                                                                        </label>
-                                                                        <div class="form-check">
-                                                                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                              <label class="form-check-label" for="exampleRadios5">
-                                                                                    It depends
-                                                                              </label>
-                                                                              <p>5. What is your native language?</p>
-                                                                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                              <label class="form-check-label" for="exampleRadios1">
-                                                                                    English
-                                                                              </label>
-                                                                              <div class="form-check">
-                                                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                    <label class="form-check-label" for="exampleRadios2">
-                                                                                          Spanish
-                                                                              </div>
-                                                                              <div class="form-check">
-                                                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                                    <label class="form-check-label" for="exampleRadios3">
-                                                                                          Portuguese
-                                                                                    </label>
-                                                                                    <div class="form-check">
-                                                                                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                                          <label class="form-check-label" for="exampleRadios4">
-                                                                                                French
-                                                                                          </label>
-                                                                                          <div class="form-check">
-                                                                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                                                <label class="form-check-label" for="exampleRadios5">
-                                                                                                      Italian
-                                                                                                </label>
-
-                                                                                                <p>6. Which actor would you
-                                                                                                      like to star in a movie
-                                                                                                      with?</p>
-                                                                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                                                <label class="form-check-label" for="exampleRadios1">
-                                                                                                      Denzel Washington
-                                                                                                </label>
-                                                                                                <div class="form-check">
-                                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                                      <label class="form-check-label" for="exampleRadios2">
-                                                                                                            Matt Damon
-                                                                                                </div>
-                                                                                                <div class="form-check">
-                                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                                                      <label class="form-check-label" for="exampleRadios3">
-                                                                                                            Popeye
-                                                                                                      </label>
-                                                                                                      <div class="form-check">
-                                                                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                                                            <label class="form-check-label" for="exampleRadios4">
-                                                                                                                  Antonio Banderas
-                                                                                                            </label>
-                                                                                                            <div class="form-check">
-                                                                                                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                                                                  <label class="form-check-label" for="exampleRadios5">
-                                                                                                                        None of the Above
-                                                                                                                  </label>
-                                                                                                                  <p>7. Do you
-                                                                                                                        like
-                                                                                                                        cartoon
-                                                                                                                        movies?</p>
-                                                                                                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                                                                  <label class="form-check-label" for="exampleRadios1">
-                                                                                                                        Yes
-                                                                                                                  </label>
-                                                                                                                  <div class="form-check">
-                                                                                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                                                        <label class="form-check-label" for="exampleRadios2">
-                                                                                                                              No
-                                                                                                                  </div>
-                                                                                                                  <div class="form-check">
-                                                                                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                                                                        <label class="form-check-label" for="exampleRadios3">
-                                                                                                                              Maybe
-                                                                                                                        </label>
-                                                                                                                        <div class="form-check">
-                                                                                                                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                                                                              <label class="form-check-label" for="exampleRadios4">
-                                                                                                                                    Sometimes
-                                                                                                                              </label>
-                                                                                                                              <div class="form-check">
-                                                                                                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                                                                                    <label class="form-check-label" for="exampleRadios5">
-                                                                                                                                          It depends
-                                                                                                                                    </label>
-                                                                                                                                    <p>8.
-                                                                                                                                          Do
-                                                                                                                                          you
-                                                                                                                                          like
-                                                                                                                                          using
-                                                                                                                                          a
-                                                                                                                                          sword?</p>
-                                                                                                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                                                                                    <label class="form-check-label" for="exampleRadios1">
-                                                                                                                                          Yes
-                                                                                                                                    </label>
-                                                                                                                                    <div class="form-check">
-                                                                                                                                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                                                                          <label class="form-check-label" for="exampleRadios2">
-                                                                                                                                                No
-                                                                                                                                    </div>
-                                                                                                                                    <div class="form-check">
-                                                                                                                                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                                                                                          <label class="form-check-label" for="exampleRadios3">
-                                                                                                                                                Maybe
-                                                                                                                                          </label>
-                                                                                                                                          <div class="form-check">
-                                                                                                                                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                                                                                                <label class="form-check-label" for="exampleRadios4">
-                                                                                                                                                      Sometimes
-                                                                                                                                                </label>
-                                                                                                                                                <div class="form-check">
-                                                                                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                                                                                                      <label class="form-check-label" for="exampleRadios5">
-                                                                                                                                                            It depends
-                                                                                                                                                      </label>
-                                                                                                                                                      <p>9.
-                                                                                                                                                            Do
-                                                                                                                                                            you
-                                                                                                                                                            like
-                                                                                                                                                            muscles?</p>
-                                                                                                                                                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                                                                                                      <label class="form-check-label" for="exampleRadios1">
-                                                                                                                                                            Yes
-                                                                                                                                                      </label>
-                                                                                                                                                      <div class="form-check">
-                                                                                                                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                                                                                            <label class="form-check-label" for="exampleRadios2">
-                                                                                                                                                                  No
-                                                                                                                                                      </div>
-                                                                                                                                                      <div class="form-check">
-                                                                                                                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                                                                                                            <label class="form-check-label" for="exampleRadios3">
-                                                                                                                                                                  Maybe
-                                                                                                                                                            </label>
-                                                                                                                                                            <div class="form-check">
-                                                                                                                                                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                                                                                                                  <label class="form-check-label" for="exampleRadios4">
-                                                                                                                                                                        Sometimes
-                                                                                                                                                                  </label>
-                                                                                                                                                                  <div class="form-check">
-                                                                                                                                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                                                                                                                        <label class="form-check-label" for="exampleRadios5">
-                                                                                                                                                                              It depends
-                                                                                                                                                                        </label>
-                                                                                                                                                                        <p>10.
-                                                                                                                                                                              Do
-                                                                                                                                                                              you
-                                                                                                                                                                              like
-                                                                                                                                                                              spinach?</p>
-                                                                                                                                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                                                                                                                                        <label class="form-check-label" for="exampleRadios1">
-                                                                                                                                                                              Yes
-                                                                                                                                                                        </label>
-                                                                                                                                                                        <div class="form-check">
-                                                                                                                                                                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                                                                                                                                              <label class="form-check-label" for="exampleRadios2">
-                                                                                                                                                                                    No
-                                                                                                                                                                        </div>
-                                                                                                                                                                        <div class="form-check">
-                                                                                                                                                                              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                                                                                                                                              <label class="form-check-label" for="exampleRadios3">
-                                                                                                                                                                                    Maybe
-                                                                                                                                                                              </label>
-                                                                                                                                                                              <div class="form-check">
-                                                                                                                                                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4">
-                                                                                                                                                                                    <label class="form-check-label" for="exampleRadios4">
-                                                                                                                                                                                          Sometimes
-                                                                                                                                                                                    </label>
-                                                                                                                                                                                    <div class="form-check">
-                                                                                                                                                                                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5">
-                                                                                                                                                                                          <label class="form-check-label" for="exampleRadios5">
-                                                                                                                                                                                                It depends
-                                                                                                                                                                                          </label>
-                                                                                                                                                                                          <div class="col-auto">
-                                                                                                                                                                                                      <button type="submit" class="btn btn-primary mb-2">Submit</button>
-                                                                                                                                                                                                    </div>
-      </body>
-      
-                                                                                                                                                                                    </div>
-                                                                                                                                                                                    
+</body>
 </html>
