@@ -15,12 +15,14 @@
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
             crossorigin="anonymous">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<style>
-       body{ margin-top: 50px;
-      margin-left: 50px;
-      background: beige;
-       }
-</style>
+
+      <style>
+            body {
+                  margin-top: 50px;
+                  margin-left: 50px;
+                  background: beige;
+            }
+      </style>
 </head>
 
 <body>
@@ -29,13 +31,13 @@
             <br>
             <br>
             <div class="form-group">
-                  <label for="user-name">Name:</label>
+                  <label for="user-name">Full Name:</label>
                   <input type="text" class="form-checker" id="name">
             </div>
             <br>
             <br>
             <div class="form-group">
-                  <label for="name">Photo:</label>
+                  <label for="name">Photo of You:</label>
                   <input type="text" class="form-checker" id="photo">
 
             </div>
@@ -46,7 +48,7 @@
 
             <div class="row col-lg-12">
                   <p>1. What type of movie do you like?</p>
-           
+
                   <div class="form-group col-xs-3">
                         <select data-placeholder="" class="form-control" id="questionion1">
                               <option></option>
@@ -199,34 +201,34 @@
                         </select>
                         <br>
                         <button type="submit" data-target="modal1" class="btn btn-success btn-block" id="submit1">Submit</button>
-                        
+
                   </div>
             </div>
             <br>
             <br>
 
       </form>
+
       <div class='col s4'>
             <p>
                   <a href='/api/friends'>Friends List</a> |
                   <a href="https://github.com/SallyTemple/FriendFinder.git" target='_blank'>GitHub Repo</a>
-            </p>
       </div>
 
-      </div>
 
       <div id="modal1" class="modal">
             <div class="modal-content">
-                  <h5>Yes, this is perfect match</h5>
+                  <h5>You Now a Moving Star!!! Smile</h5>
                   <h5 id="matchStarandAppli"></h5>
-                  <img id="matchPhotos" src="" alt="No Image" width=2 50px>
+                  <img id="matchPhotos" src="" alt="No Image" width=250px>
             </div>
             <div class="modal-footer">
                   <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
       </div>
 
-      </div>
+
+
       <script type="text/javascript">
             $(document).ready(function () {
                   $("#submit1").on("click", function () {
@@ -250,29 +252,27 @@
 
                         if (checkForm() == true) {
                               var newAppli = {
-                                    name: $("#name").val().trim(),
+                                    names: $("#name").val().trim(),
                                     photos: $("#photo").val().trim(),
-                                    scores: [$("#questionion1").val(), $("#questionion2").val(), $("#questionion3").val(), $("#questionion4").val(), $("#questionion5").val(), $("#questionion6").val(), $("#questionion7").val(), $("#questionion8").val(), $("#questionion9").val(), $("#questionion10").val()]
+                                    scores: [$("#questionion1").val(), $("#questionion2").val(), $("#questionion3").val(), $("#questionion4").val(), $("#questionion5").val(), $("#questionion6").val(), $("#questionion7").val(), $("#questionion8").val(), $("#questionion9").val(), $("#questionion10").val(),]
                               };
 
 
                               var currentURL = window.location.origin;
-
                               $.post(currentURL + "/api/friends", newAppli, function (data) {
-
-                                    $("#matchStarandAppli").text(data.name);
+                                    $("#matchStarandAppli").text(data.names);
                                     $("#matchPhotos").attr("src", data.photos);
 
                               });
 
-                              $('.modal').modal();
+                              $("#modal1").modal();
 
                               //empty applicant answer
                               $("#name").val(""); $("#photo").val(""); $("#questionion1").val(""); $("#questionion2").val(""); $("#questionion3").val(""); $("#questionion4").val("");
                               $("#questionion5").val(""); $("#questionion6").val(""); $("#questionion7").val(""); $("#questionion8").val(""); $("#questionion9").val(""); $("#questionion10").val("");
 
                         } else {
-                              alert("You need to fill in the fields")
+                              alert("You need to fill in all fields")
                         }
 
                   });
