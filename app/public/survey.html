@@ -19,13 +19,13 @@
             <h1>Profile Questions</h1>
             <div class="form-group">
                   <label for="user-name">Name:</label>
-                  <input type="text" class="form-control" id="user-name">
+                  <input type="text" class="form-checker" id="name">
             </div>
             <br>
             <br>
             <div class="form-group">
-                  <label for="user-photo">Photo:</label>
-                  <input type="text" class="form-control" id="user-photo">
+                  <label for="name">Photo:</label>
+                  <input type="text" class="form-checker" id="photos">
 
             </div>
             <br>
@@ -36,7 +36,7 @@
             <div class="row col-lg-12">
                   <p>1. What type of movie do you like?</p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion1">
+                        <select data-placeholder="" class="form-control" id="questionion1">
                               <option></option>
                               <option>1 Action</option>
                               <option>2 Adventure </option>
@@ -52,7 +52,7 @@
 
                   <p>2. Which movie star you like the best?</p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion2">
+                        <select data-placeholder="" class="form-control" id="questionion2">
                               <option></option>
                               <option>1 Denzel Washington</option>
                               <option>2 Matt Damon</option>
@@ -67,7 +67,7 @@
             <div class="row col-lg-12">
                   <p>3. Do you like CIA movies?</p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion3">
+                        <select data-placeholder="" class="form-control" id="questionion3">
                               <option></option>
                               <option>1 Yes</option>
                               <option>2 No</option>
@@ -82,7 +82,7 @@
             <div class="row col-lg-12">
                   <p>4. Do you like running?</p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion4">
+                        <select data-placeholder="" class="form-control" id="questionion4">
                               <option></option>
                               <option>1 Yes</option>
                               <option>2 No</option>
@@ -97,7 +97,7 @@
             <div class="row col-lg-12">
                   <p>5. What is your native language?</p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion5">
+                        <select data-placeholder="" class="form-control" id="questionion5">
                               <option></option>
                               <option>1 English</option>
                               <option>2 Spanish</option>
@@ -113,7 +113,7 @@
                   <p>6. Which actor would you like to star in a movie with?
                   </p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion6">
+                        <select data-placeholder="" class="form-control" id="questionion6">
                               <option></option>
                               <option>1 Denzel Washington</option>
                               <option>2 Matt Damon</option>
@@ -129,7 +129,7 @@
                   <p>7. Do you like cartoon movies?
                   </p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion7">
+                        <select data-placeholder="" class="form-control" id="questionion7">
                               <option></option>
                               <option>1 Yes</option>
                               <option>2 No</option>
@@ -145,7 +145,7 @@
                   <p>8. Do you like using a sword?
                   </p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion8">
+                        <select data-placeholder="" class="form-control" id="questionion8">
                               <option></option>
                               <option>1 Yes</option>
                               <option>2 No</option>
@@ -161,7 +161,7 @@
                   <p>9. Do you like muscles?
                   </p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion9">
+                        <select data-placeholder="" class="form-control" id="questionion9">
                               <option></option>
                               <option>1 Yes</option>
                               <option>2 No</option>
@@ -177,7 +177,7 @@
                   <p>10. Do you like spinach?
                   </p>
                   <div class="form-group col-xs-3">
-                        <select class="form-control" id="questionion10">
+                        <select data-placeholder="" class="form-control" id="questionion10">
                               <option></option>
                               <option>1 Yes</option>
                               <option>2 No</option>
@@ -197,96 +197,72 @@
         </div>
       
       </div>
-      <div class="modal fade" id="userModal" role="dialog">
-            <div class="modal-dialog">
-                  <div class="modal-content">
-                        <div class="modal-header">
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
-                              <h4 class="modal-title"></h4>
-                        </div>
-                        <div class="modal-body">
-                        </div>
-                        <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                  </div>
 
-                  <script type="text/javascript">
-
-                        $('#submit').on("click", function () {
-
-                              var userInput;
-                              if ($("#user-name").val().trim() === " ") {
-                                    alert("Please enter full name");
-                              }
-                              else if ($("#user-photo").val().trim() === " ") {
-                                    alert("Please Enter a photo of yourself");
-                              }
-                              else {
-                                    var userAnswer = [];
-                                    for (i = 1; i < 11; i++) {
-                                          userAnswer.push($("question" + i).val().substring(0, 1));
-                                    }
-
-                                   /* var userEntry =
-                                          {
-                                                name: $("#user-name").val().trim(),
-                                                photo: $("#user-photo").val().trim(),
-                                                scores: userAnswer
-                                          };*/
-
-                                    var photoLink = window.location.origin;
-
-
-                                    $.post(photoLink + "/api/friends", userEntry,
-                                          function (data) {
-
-                                          });
-
-                                    $.ajax({ url: photoLink + "/api/friends", method: "GET" }).done(function (res) {
-
-                                          var newUser;
-                                          var currentUser = 100;
-                                          var allUsers = [];
-
-                                          for (i = 0; i < res.length - 1; i++) {
-
-                                                for (q = 0; q < 10; q++) {
-                                                      var newStar = userEntry.scores[q] - res[i].scores[q];
-                                                      allUsers.push(Math.abs(newStar));
-                                                }
-
-                                                var starGate = allUsers.reduce(add, 0);
-
-                                                if (starGate < currentUser) {
-                                                      newUser = res[i];
-                                                      currentUser = starGate;
-                                                      allUsers = [];
-                                                }
-
-                                                else {
-                                                      allUsers = [];
-                                                }
-
-                                          }
-
-                                          var userName = '<h3>' + newUser.user-name + '<h3>';
-                                          var userPhoto = '<img width="200px" src=' + newUser.user-photo + '>';
-
-                                          $("#userModal").modal("show");
-                                          $("#userModal h3").html(userName);
-                                          $(".modal-body").html(userPhoto);
-                                          $("#userQuestions")[0].reset();
-
-                                    });
-                              }
-                              return false;
-
+      <div id="modal1" class="modal">
+            <div class="modal-content">
+              <h5></h5>
+              <h5 id="matchStarandAppli"></h5>
+              <img id="matchPhotos" src="" alt="No Image" width = 250px>
+            </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+          </div>
+        </div>
+  
+      </div>
+      <script type="text/javascript">
+            $(document).ready(function() {
+                $("#submit").on("click", function() {
+                    function checkForm() {
+                        var formValidation = true;
+                        $(".form-checker").each(function() {
+                            if ($(this).val() === ''){
+                                formValidation= false;
+                            }
                         });
-
-                        function add(a, b) {
-                              return a + b;
+            
+                        $('.form-control').each(function() {
+                            if ($(this).val() === ""){
+                                formValidation= false;
+                            }
+                        });
+            
+                        return formValidation;
+                    }
+            
+                
+                    if (checkForm() == true) {
+                        var newAppli = {
+                            name: $("#name").val().trim(),
+                            photos: $("#photo").val().trim(),
+                            scores: [$("#questionion1").val(), $("#questionion2").val(), $("#questionion3").val(), $("#questionion4").val(), $("#questionion5").val(),$("#questionion6").val(), $("#questionion7").val(), $("#questionion8").val(), $("#questionion9").val(), $("#questionion10").val()]
                         };
+            
+                      
+                        var currentURL = window.location.origin;
+            
+                        $.post(currentURL + "/api/friends", newAppli, function(data) {
+                         
+                            $("#matchStarandAppli").text(data.name);
+                            $("#matchPhotos").attr("src", data.photos);
+            
+                        });
+                       
+                            $('.modal').modal();
+            
+                        //empty applicant answer
+                        $("#name").val("");$("#photo").val(""); $("#questionion1").val(""); $("#questionion2").val("");$("#questionion3").val(""); $("#questionion4").val("");
+                        $("#questionion5").val("");$("#questionion6").val("");$("#questionion7").val(""); $("#questionion8").val("");$("#questionion9").val(""); $("#questionion10").val("");
+
+                    } else {
+                        alert("You need to fill in the fields")
+                    }
+            
+                });
+            });
+            </script>
+
+                 
 
                   </script>
 </body>
